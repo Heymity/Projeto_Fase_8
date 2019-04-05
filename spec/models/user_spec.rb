@@ -7,6 +7,6 @@ RSpec.describe User, type: :model do
     it{is_expected.to validate_uniqueness_of(:email).case_insensitive}
     it{is_expected.to validate_confirmation_of(:password)}
     it{is_expected.to allow_value("teste@supergeeks.com.br").for(:email)}
-    it{is_expected.to validate_uniqueness_of(:auth_token)}
+    it{is_expected.to validates_uniqueness_of(:auth_token)}
     
 end 
